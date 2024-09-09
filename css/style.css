@@ -766,3 +766,18 @@ p {
         max-width: 260px;
     }
 }
+
+/* Add this CSS to your style.css file or in the <style> section of the page */
+
+/* Ensure the logo scales properly on all screens */
+.logo img {
+    max-width: 100%; /* Limits the logo width to 100% of its container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Adjustments specifically for smaller screens (mobile) */
+@media (max-width: 767px) {
+    .logo img {
+        max-width: 70%; /* Further reduce the size on small screens */
+    }
+}
