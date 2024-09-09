@@ -1,6 +1,6 @@
 var eventTime=null
 $(document).ready(function(){setInterval(function(){countdown();},1000);});function countdown(){if(!eventTime){eventTime=new Date()
-eventTime.setHours(eventTime.getHours()+60);}
+eventTime.setTime(eventTime.getTime() + (30 * 24 * 60 * 60 * 1000));}
 endTime=(Date.parse(eventTime)/1000);var now=new Date();now=(Date.parse(now)/1000);var timeLeft=endTime-now;var days=Math.floor(timeLeft/86400);var hours=Math.floor((timeLeft-(days*86400))/3600);var minutes=Math.floor((timeLeft-(days*86400)-(hours*3600))/60);var seconds=Math.floor((timeLeft-(days*86400)-(hours*3600)-(minutes*60)));if(days<"10"){days="0"+days;}
 if(hours<"10"){hours="0"+hours;}
 if(minutes<"10"){minutes="0"+minutes;}
